@@ -162,9 +162,6 @@ killall avalanche-network-runner
 ## CONCLUSION
 We have successfully created a custom virtual machine to handle token minting and transfers. By using HyperSDK, you can further tailor the blockchain to meet your specific requirements.
 
-## Video Walkthrough
-https://www.loom.com/share/13932a1ad2f145448a8b3dff8f30d4f2?sid=8121f368-57bb-438d-9b27-7808a30b2d2a
-
 ## Authors
 Khyati kumari
 
