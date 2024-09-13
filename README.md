@@ -161,5 +161,11 @@ Closing the Local Avalanche Network: To shut down the local Avalanche network, r
 killall avalanche-network-runner
 ## CONCLUSION
 We have successfully created a custom virtual machine to handle token minting and transfers. By using HyperSDK, you can further tailor the blockchain to meet your specific requirements.
+
+## Video Walkthrough
+
 ## Authors
 Khyati kumari
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
