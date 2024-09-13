@@ -12,19 +12,27 @@ import (
 )
 
 const (
-	// TODO: choose a human-readable part for your hyperchain
-	HRP = ""
-	// TODO: choose a name for your hyperchain
-	Name = ""
-	// TODO: choose a token symbol
-	Symbol = ""
+	// Choose a human-readable part (HRP) for your hyperchain
+	// For example, "hyp" for "Hyperchain".
+	HRP = "Khyati_chain"
+
+	// Choose a name for your hyperchain
+	// For example, "HyperNet".
+	Name = "Khyati"
+
+	// Choose a token symbol for your hyperchain
+	// For example, "HYP" for the native token.
+	Symbol = "KHYT"
 )
 
 var ID ids.ID
 
 func init() {
+	// Ensure the name is appropriately padded for the ID generation.
 	b := make([]byte, consts.IDLen)
 	copy(b, []byte(Name))
+
+	// Generate the ID based on the Name and handle errors.
 	vmID, err := ids.ToID(b)
 	if err != nil {
 		panic(err)
@@ -32,8 +40,8 @@ func init() {
 	ID = vmID
 }
 
-// Instantiate registry here so it can be imported by any package. We set these
-// values in [controller/registry].
+// Instantiate registry here so it can be imported by any package.
+// We set these values in [controller/registry].
 var (
 	ActionRegistry *codec.TypeParser[chain.Action, *warp.Message, bool]
 	AuthRegistry   *codec.TypeParser[chain.Auth, *warp.Message, bool]
