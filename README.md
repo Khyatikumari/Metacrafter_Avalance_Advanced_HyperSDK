@@ -82,19 +82,19 @@ if errs.Errored() {
 }
 }
 
-## Run the Virtual Machine Locally:
-# Make sure Go is included in your system's PATH. If it isn't, add it with the following command:
+# Run the Virtual Machine Locally:
+### Make sure Go is included in your system's PATH. If it isn't, add it with the following command:
 export PATH=$PATH:$(go env GOPATH)/bin
-# Then, execute these commands to run and build the virtual machine:
+### Then, execute these commands to run and build the virtual machine:
 MODE="run-single" ./scripts/run.sh
 ./scripts/build.sh
-# To import the demo private key provided in the project, use:
+### To import the demo private key provided in the project, use:
 ./build/token-cli key import demo.pk
 ./build/token-cli chain import-anr
 
-## Interact with hyperchain
-# Mint and Trade
-# Step 1: Create Your Asset
+# Interact with hyperchain
+### Mint and Trade
+### Step 1: Create Your Asset
 
 First up, let's create our own asset. You can do so by running the following command from this location:
 
@@ -116,7 +116,7 @@ txID is the assetID of your new asset.
 
 The "loaded address" here is the address of the default private key (demo.pk). We use this key to authenticate all interactions with the tokenvm.
 
-# Step 2: Mint Your Asset
+### Step 2: Mint Your Asset
 After we've created our own asset, we can now mint some of it. You can do so by running the following command from this location:
 
 ./build/token-cli action mint-asset When you are done, the output should look something like this (usually easiest just to mint to yourself).
@@ -139,7 +139,7 @@ continue (y/n): y
 
 ✅ txID: X1E5CVFgFFgniFyWcj5wweGg66TyzjK2bMWWTzFwJcwFYkF72
 
-# Step 3: View Your Balance
+### Step 3: View Your Balance
 Now, let's check that the mint worked right by checking our balance. You can do so by running the following command from this location:
 
 ./build/token-cli key balance When you are done, the output should look something like this:
